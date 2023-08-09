@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="20dp"
+            android:background="@drawable/shape_bgr_dialog_filter"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filter"
+                android:textSize="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sort_by_size"
+                android:textColor="@color/grey01"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/newtoold"
+                    android:textColor="@color/grey01"
+                    android:padding="5dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:textSize="16sp"
+                    android:id="@+id/checkbox_ascending"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/oldtonew"
+                    android:textColor="@color/grey01"
+                    android:padding="5dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/checkbox_decrease"/>
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="apply"
+                android:id="@+id/bt_apply"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/shape_bgr_bt_movedetails"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_cancel"
+                android:padding="10dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/img_cancel"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

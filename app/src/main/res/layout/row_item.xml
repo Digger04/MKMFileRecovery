@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="5dp"
+        android:id="@+id/layout_view"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:id="@+id/img_file"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_simple"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_transfer_item"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="name"
+                        android:gravity="center_horizontal"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="bottom"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/txt_name"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txt_size"
+                    android:textSize="10sp"
+                    android:text="0.0K"/>
+
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_checkbox"
+                android:layout_margin="2dp"
+                android:id="@+id/checkbox"
+                android:layout_gravity="right"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
