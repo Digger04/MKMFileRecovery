@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -123,40 +124,47 @@ public class SettinglanguageActivity extends LocaleAwareCompatActivity implement
         txt_language = findViewById(R.id.txt_language);
     }
     private void setView() {
-        RecyclerView recyclerView = findViewById(R.id.rv_language);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
-        LanguageAdapter adapter = new LanguageAdapter(this, LanguageCode.languages, this);
-        recyclerView.setAdapter(adapter);
 
-        if (lg.equals("vi")) {
-            txt_language.setText("Cài đặt");
-        }else if (lg.equals("en")) {
-            txt_language.setText("Settings");
-        }else if (lg.equals("de")) {
-            txt_language.setText("Einstellung");
-        }else if (lg.equals("fr")) {
-            txt_language.setText("Paramètre");
-        }else if (lg.equals("id")) {
-            txt_language.setText("Pengaturan");
-        }else if (lg.equals("it")) {
-            txt_language.setText("Impostazioni");
-        }else if (lg.equals("ja")) {
-            txt_language.setText("設定");
-        }else if (lg.equals("ko")) {
-            txt_language.setText("환경");
-        }else if (lg.equals("pt")) {
-            txt_language.setText("Contexto");
-        }else if (lg.equals("tr")) {
-            txt_language.setText("Ayar");
-        }else if (lg.equals("th")) {
-            txt_language.setText("การตั้งค่า");
-        }else if (lg.equals("ru")) {
-            txt_language.setText("Параметр");
-        }else if (lg.equals("hi")) {
-            txt_language.setText("स्थापना");
-        }else if (lg.equals("iw")) {
-            txt_language.setText("הגדרה");
+        try {
+
+            RecyclerView recyclerView = findViewById(R.id.rv_language);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+            LanguageAdapter adapter = new LanguageAdapter(this, LanguageCode.languages, this);
+            recyclerView.setAdapter(adapter);
+
+            if (lg.equals("vi")) {
+                txt_language.setText("Cài đặt");
+            }else if (lg.equals("en")) {
+                txt_language.setText("Settings");
+            }else if (lg.equals("de")) {
+                txt_language.setText("Einstellung");
+            }else if (lg.equals("fr")) {
+                txt_language.setText("Paramètre");
+            }else if (lg.equals("id")) {
+                txt_language.setText("Pengaturan");
+            }else if (lg.equals("it")) {
+                txt_language.setText("Impostazioni");
+            }else if (lg.equals("ja")) {
+                txt_language.setText("設定");
+            }else if (lg.equals("ko")) {
+                txt_language.setText("환경");
+            }else if (lg.equals("pt")) {
+                txt_language.setText("Contexto");
+            }else if (lg.equals("tr")) {
+                txt_language.setText("Ayar");
+            }else if (lg.equals("th")) {
+                txt_language.setText("การตั้งค่า");
+            }else if (lg.equals("ru")) {
+                txt_language.setText("Параметр");
+            }else if (lg.equals("hi")) {
+                txt_language.setText("स्थापना");
+            }else if (lg.equals("iw")) {
+                txt_language.setText("הגדרה");
+            }
+        }catch (Exception e) {
+            Log.d("erefw", "ddd: " + e);
         }
+
 
     }
 

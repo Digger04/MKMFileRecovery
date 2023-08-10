@@ -49,3 +49,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MKMFileRecovery"
 include ':app'
+include ':ads'
+

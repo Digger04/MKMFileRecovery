@@ -9,55 +9,85 @@
     android:gravity="center_horizontal"
     tools:context=".Activity.OTPActivity">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_phone" />
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/verify"
-        android:textSize="25dp"
-        android:fontFamily="@font/poppins_bold"
-        android:id="@+id/txt_verify"
-        android:textColor="@color/grey01"
-        android:gravity="center_horizontal"
-        android:textStyle="bold"/>
+        android:layout_height="match_parent">
 
-    <com.chaos.view.PinView
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:inputType="number"
-        android:elevation="10dp"
-        android:textColor="@color/grey01"
-        app:itemCount="4"
-        app:itemHeight="60dp"
-        app:itemWidth="60dp"
-        android:itemBackground="@color/white"
-        app:itemRadius="10dp"
-        app:lineColor="@color/greytransper"
-        app:viewType="rectangle"
-        android:id="@+id/pinview"
-        style="@style/PinWidget.PinView"/>
+        <include
+            android:id="@+id/include123"
+            layout="@layout/layout_banner_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/continue."
-        android:background="@drawable/shape_bgr_bt_movedetails"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins_medium"
-        android:layout_marginRight="50dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:gravity="center"
-        android:id="@+id/bt_verify"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/include123"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_phone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/verify"
+                android:textSize="25dp"
+                android:fontFamily="@font/poppins_bold"
+                android:id="@+id/txt_verify"
+                android:textColor="@color/grey01"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"/>
+
+            <com.chaos.view.PinView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:inputType="number"
+                android:elevation="10dp"
+                android:textColor="@color/grey01"
+                app:itemCount="4"
+                app:itemHeight="60dp"
+                app:itemWidth="60dp"
+                android:itemBackground="@color/white"
+                app:itemRadius="10dp"
+                app:lineColor="@color/greytransper"
+                app:viewType="rectangle"
+                android:id="@+id/pinview"
+                style="@style/PinWidget.PinView"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/continue."
+                android:background="@drawable/shape_bgr_bt_movedetails"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginRight="50dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:id="@+id/bt_verify"/>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/include1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_native_medium"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
 
 </LinearLayout>

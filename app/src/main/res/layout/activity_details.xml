@@ -34,9 +34,17 @@
 
     </LinearLayout>
 
+    <include
+        android:id="@+id/include123"
+        layout="@layout/layout_banner_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_toolbar"
+        />
+
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_below="@id/layout_toolbar"
+        android:layout_below="@id/include123"
         android:id="@+id/frameimg"
         android:layout_height="300dp">
 
